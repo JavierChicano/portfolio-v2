@@ -1,0 +1,21 @@
+---
+import fotoPerfil from "../../public/foto.webp";
+---
+
+<header class="relative text-white p-4 mt-8 z-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-3 w-full items-center">
+	  <div class="w-full flex flex-col justify-center">
+		<h1 class="text-2xl font-bold">Javier Chicano</h1>
+    </div>
+    <div class="w-full flex justify-center">
+      <img
+        src={fotoPerfil.src}
+        alt=""
+        class="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover"
+      />
+    </div>
+    <article class="w-full flex justify-end items-center">
+      <a href="/JavierChicanoCV.pdf" download="JavierChicanoCV.pdf" class="hover:text-primary-blue transition-colors">Descargar CV</a>
+    </article>
+  </div>
+</header>

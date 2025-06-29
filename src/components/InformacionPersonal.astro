@@ -1,0 +1,43 @@
+---
+import Experiencia from "./Experiencia.astro";
+import Formacion from "./Formacion.astro";
+import ArrowRightIcon from "./svg/ArrowRightIcon.astro";
+import ArrowUpRightIcon from "./svg/ArrowUpRightIcon.astro";
+import GithubIcon from "./svg/GithubIcon.astro";
+import LinkedinIcon from "./svg/LinkedinIcon.astro";
+import MailIcon from "./svg/MailIcon.astro";
+---
+
+<section
+  class="relative flex flex-col items-center text-white z-20 w-full"
+>
+  <section
+    class="border-x border-b border-gray max-w-7xl w-full mx-auto grid grid-cols-3 text-xl"
+  >
+    <div class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
+      <span class="flex gap-2 items-center"><MailIcon size={28}/>Escríbeme un correo</span>
+       <a href="mailto:jchicano43@gmail.com" target="_blank" class="arrow-container relative">
+         <ArrowRightIcon size={28} class="arrow-right" />
+         <ArrowUpRightIcon size={28} class="arrow-up-right" />
+       </a>
+    </div>
+    <div class="contact-item flex items-center justify-between border-x border-gray px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
+      <span class="flex gap-2 items-center"><LinkedinIcon size={28}/>Contáctame en Linkedin</span>
+       <a href="linkedin.com/in/javier-chicano" target="_blank" class="arrow-container relative">
+         <ArrowRightIcon size={28} class="arrow-right" />
+         <ArrowUpRightIcon size={28} class="arrow-up-right" />
+       </a>
+    </div>
+    <div class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
+      <span class="flex gap-2 items-center"><GithubIcon size={28}/>Mi Github</span>
+       <a href="https://github.com/JavierChicano" target="_blank" class="arrow-container relative">
+         <ArrowRightIcon size={28} class="arrow-right" />
+         <ArrowUpRightIcon size={28} class="arrow-up-right" />
+       </a>
+    </div>
+  </section>
+  <div class="border-x border-b border-gray-600/15 max-w-7xl w-full mx-auto grid grid-cols-2">
+    <Experiencia />
+    <Formacion />
+  </div>
+</section>

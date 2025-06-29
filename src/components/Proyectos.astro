@@ -1,0 +1,75 @@
+---
+import ProyectosCard from "./proyectosCard.astro";
+---
+
+<section
+  class="relative flex flex-col text-center mt-32 text-white z-20 w-full gap-4"
+>
+  <aside
+    class="text-primary-blue text-sm bg-gray-700/15 w-fit p-2 px-4 self-center rounded-xl"
+  >
+    Proyectos finalizados pero en evolución. No se incluyen los que están en
+    desarrollo.
+  </aside>
+  <h1 class="font-bold text-5xl">Mis proyectos, mis trabajos.</h1>
+  <section
+    class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
+  >
+    <ProyectosCard
+      image="/Proyectos/PeakMate.webp"
+      imageAlt="Imagen de la web de PeakMate"
+      title="PeakMate"
+      description="Plataforma integral que conecta a usuarios y entrenadores mediante rutinas personalizadas, suscripciones creadas por los propios entrenadores."
+      link="/proyectos/peakmate"
+      badge1Img="/Lenguajes/nextjs.webp"
+      badge1Nombre="Next.js"
+      badge2Img="/Lenguajes/ts.webp"
+      badge2Nombre="TypeScript"
+      badge3Img="/Lenguajes/Mongodb.webp"
+      badge3Nombre="Mongo"
+      numberExtra={3}
+    />
+    <ProyectosCard
+      image="/Proyectos/Sacoba.webp"
+      imageAlt="Imagen de la web de Sacoba"
+      title="Sacoba"
+      description="Desarrollo de una plataforma web dinámica para Sacoba, con catálogo digital editable y proceso de compra completo sin necesidad de registro."
+      link="/proyectos/sacoba"
+      badge1Img="/Lenguajes/nextjs.webp"
+      badge1Nombre="Next.js"
+      badge2Img="/Lenguajes/tailwind.webp"
+      badge2Nombre="Tailwind"
+      badge3Img="/Lenguajes/ts.webp"
+      badge3Nombre="TypeScript"
+      numberExtra={2}
+    />
+    <ProyectosCard
+      image="/Proyectos/Mind2Mind.webp"
+      imageAlt="Imagen de la web de Mind2Mind"
+      title="Mind2Mind"
+      description="Proyecto funcional sobre el tratamiento del trastorno bipolar, con base de datos local, perfiles personalizables, citas, favoritos y chat con especialistas."
+      link="/proyectos/mind2mind"
+      badge1Img="/Lenguajes/html.webp"
+      badge1Nombre="Html"
+      badge2Img="/Lenguajes/css.webp"
+      badge2Nombre="Css"
+      badge3Img="/Lenguajes/js.webp"
+      badge3Nombre="JavaScript"
+      numberExtra={1}
+    />
+    <ProyectosCard
+      image="/Proyectos/CoinClicker.webp"
+      imageAlt="Imagen de la web de CoinClicker"
+      title="CoinClicker"
+      description="Juego inspirado en Cookie Clicker donde cada clic genera monedas, que pueden usarse para comprar mejoras con niveles crecientes, incluyendo ingresos pasivos y planes de expansión futura."
+      link="/proyectos/coinClicker"
+      badge1Img="/Lenguajes/react.webp"
+      badge1Nombre="React"
+      badge2Img="/Lenguajes/tailwind.webp"
+      badge2Nombre="Tailwind"
+      badge3Img="/Lenguajes/ts.webp"
+      badge3Nombre="TypeScript"
+      numberExtra={2}
+    />
+  </section>
+</section>

@@ -1,0 +1,75 @@
+<div
+  class="absolute inset-0 z-0 bg-black overflow-hidden mx-[15px] mt-[15px] rounded-t-2xl border-b border-gray"
+>
+  <!-- Retícula base con líneas -->
+  <div
+    class="absolute inset-0"
+    style="
+    background-size: 120px 120px; 
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px), 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  "
+  >
+  </div>
+
+  <!-- Cuadrados rellenos aleatorios grises -->
+  <div
+    class="absolute inset-0"
+    style="
+    background-size: 120px 120px;
+    background-position: 240px 120px, 720px 240px, 120px 600px, 960px 360px, 360px 840px, 1080px 120px, 480px 480px, 1200px 600px, 600px 240px, 840px 720px, 0px 960px, 1320px 480px;
+    background-image: 
+      linear-gradient(rgba(100, 100, 100, 0.08), rgba(100, 100, 100, 0.08)),
+      linear-gradient(rgba(100, 100, 100, 0.06), rgba(100, 100, 100, 0.06)),
+      linear-gradient(rgba(100, 100, 100, 0.1), rgba(100, 100, 100, 0.1)),
+      linear-gradient(rgba(100, 100, 100, 0.07), rgba(100, 100, 100, 0.07)),
+      linear-gradient(rgba(100, 100, 100, 0.09), rgba(100, 100, 100, 0.09)),
+      linear-gradient(rgba(100, 100, 100, 0.05), rgba(100, 100, 100, 0.05)),
+      linear-gradient(rgba(100, 100, 100, 0.08), rgba(100, 100, 100, 0.08)),
+      linear-gradient(rgba(100, 100, 100, 0.06), rgba(100, 100, 100, 0.06)),
+      linear-gradient(rgba(100, 100, 100, 0.07), rgba(100, 100, 100, 0.07)),
+      linear-gradient(rgba(100, 100, 100, 0.09), rgba(100, 100, 100, 0.09)),
+      linear-gradient(rgba(100, 100, 100, 0.06), rgba(100, 100, 100, 0.06)),
+      linear-gradient(rgba(100, 100, 100, 0.08), rgba(100, 100, 100, 0.08));
+    background-repeat: no-repeat;
+    background-size: 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px, 119px 119px;
+  "
+  >
+  </div>
+
+  <!-- Efecto de rayo simple rectangular rotado -->
+  <!-- Rayo 1 -->
+  <div
+    class="z-20 absolute pointer-events-none animate-fade-in left-0 top-0 h-[1380px] w-[240px] rounded-full translate-y-[-70%] translate-x-[-180%] rotate-[-45deg] bg-ambientLight3 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0%,hsla(0,0%,45%,.02)_80%,transparent_100%)]"
+  >
+  </div>
+  <!-- Rayo 2 -->
+  <div
+    class="z-20 absolute pointer-events-none animate-fade-in left-0 top-0 h-[1380px] w-[560px] rounded-full translate-y-[-350px] rotate-[-45deg] bg-ambientLight bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0%,hsla(0,0%,45%,.02)_80%,transparent_100%)]"
+  >
+  </div>
+  <!-- Rayo 3 -->
+  <div
+    class="z-20 absolute pointer-events-none animate-fade-in left-0 top-0 h-[1380px] w-[240px] rounded-full translate-y-[-50%] translate-x-[5%] rotate-[-45deg] bg-ambientLight2 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0%,hsla(0,0%,45%,.02)_80%,transparent_100%)]"
+  >
+  </div>
+
+  <!-- Gradiente que hace desaparecer hacia abajo -->
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-transparent from-0% via-transparent via-5% to-black to-100%"
+  >
+  </div>
+
+  <!-- Gradiente inverso que difumina desde el centro hacia arriba -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-transparent from-50% via-transparent via-5% to-black to-100%"
+  >
+  </div>
+
+  <!-- Gradiente suave hacia la derecha -->
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-transparent via-50% to-black/60 to-100%"
+  >
+  </div>
+</div>

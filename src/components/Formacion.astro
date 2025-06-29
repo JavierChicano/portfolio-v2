@@ -1,0 +1,23 @@
+---
+import InfoCard from "./infoCard.astro";
+---
+
+<section class="flex flex-col w-full p-12 gap-8 border-r border-gray">
+    <h1 class="font-semibold text-3xl">Formación</h1>
+    <InfoCard 
+        image="/ueLogo.webp" 
+        imageAlt="Universidad Europea Logo" 
+        title="Técnico Superior Desarrollo Aplicaciones Web, DAW" 
+        empresa="Universidad Europea, UEM. Madrid." 
+        description="Formación oficial de FP en desarrollo web con un plan práctico centrado en HTML5, CSS3, JavaScript y PHP."
+        date="Sep 2022 - Jun 2024" 
+    />
+    <InfoCard 
+        image="/utadLogo.webp" 
+        imageAlt="Universidad Europea Logo" 
+        title="Cursando Ingeniería de Software." 
+        empresa="C.U. de Tecnología y Arte Digital. U-tad. Madrid." 
+        description="Grado universitario oficial, con enfoque en Computer Science, desarrollo de software y especialización en Big Data."
+        date="Sep 2024 - Actualidad" 
+    />
+</section>
