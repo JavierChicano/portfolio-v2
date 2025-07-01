@@ -1,0 +1,21 @@
+---
+export interface Props {
+  pagina: string;
+}
+
+const { pagina } = Astro.props;
+---
+
+<aside class="flex gap-2">
+  <a
+    href={"/"}
+  >
+    Main
+  </a>
+  <span>
+     >
+  </span>
+  <span class="font-semibold">
+    {pagina}
+  </span>
+</aside>

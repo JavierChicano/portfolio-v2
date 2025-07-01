@@ -1,0 +1,180 @@
+---
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import HerramientasSection from "@/components/HerramientasSection.astro";
+import StackCard from "@/components/StackCard.astro";
+import AutenticacionIcon from "@/components/svg/AutenticacionIcon.astro";
+import BbddIcon from "@/components/svg/BbddIcon.astro";
+import ExternalLinkIcon from "@/components/svg/ExternalLinkIcon.astro";
+import PagoAutomaticoIcon from "@/components/svg/PagoAutomaticoIcon.astro";
+import FicherosIcon from "@/components/svg/FicherosIcon.astro";
+import IdiomaIcon from "@/components/svg/IdiomaIcon.astro";
+import PagoIcon from "@/components/svg/PagoIcon.astro";
+import Layout from "@/layouts/Layout.astro";
+import EnviarIcon from "@/components/svg/EnviarIcon.astro";
+---
+
+<Layout>
+  <section class="flex flex-col w-full mt-12 items-center">
+    <div class="w-full max-w-7xl px-6 flex flex-col gap-4">
+      <Breadcrumb pagina="PeakMate" />
+      <div class="w-full border-b border-gray flex justify-between flex-wrap">
+        <h1 class="text-3xl flex gap-2">
+          Proyecto<span class="text-primary-blue">PeakMate</span>
+        </h1>
+        <a
+          href="/Proyectos/DocumentacionPeakMate.pdf"
+          target="_blank"
+          class="flex gap-2 items-center text-xl text-gray-500 sm:text-white"
+          >Documentación<ExternalLinkIcon /></a
+        >
+      </div>
+      <article>
+        <p>
+          Peak Mate es una aplicación completa y dinámica, diseñada tanto para
+          personas que desean entrenar como para entrenadores personales.
+          Permite a los usuarios acceder a contenido personalizado según sus
+          objetivos, ya sea de forma gratuita o mediante suscripción, por otro
+          lado, los entrenadores pueden mostrar sus métodos y rutinas, atrayendo
+          miembros interesados en planes específicos.
+        </p>
+        <p>
+          Los entrenamientos se valoran mediante el feedback de los usuarios, lo
+          que motiva a los entrenadores a mejorar continuamente su oferta.
+          Gracias a este enfoque, todos los perfiles de usuarios se benefician
+          de una experiencia enriquecedora y adaptada.
+        </p>
+        <p>
+          Todo esto en una página ofrecida tanto en ingles como en español,
+          gracias a la implementación de varios sistemas de idiomas en el
+          desarrollo.
+        </p>
+      </article>
+      <section class="w-full border-y border-gray grid grid-cols-1 lg:grid-cols-2">
+        <a
+          class="flex flex-col gap-2 p-4 items-center group"
+          href="https://peakmate.fit/"
+          target="_blank"
+        >
+          <h2 class="text-2xl flex gap-2 items-end">
+            Link al proyecto <ExternalLinkIcon size={24} />
+          </h2>
+          <div class="max-w-lg w-full">
+            <img
+              src="/Proyectos/PeakMate2.webp"
+              alt="Foto del proyecto Sacoba"
+              class="w-full h-auto transition-all duration-300 group-hover:drop-shadow-primary-blue rounded-lg object-contain"
+              style="filter: drop-shadow(0 0 1px #7A7A7A);"
+            />
+          </div>
+        </a>
+        <div class="flex flex-col gap-2 p-4 items-center">
+          <h2 class="text-2xl">Herramientas</h2>
+          <div class="flex flex-col gap-4 h-full justify-center">
+            <HerramientasSection
+              img="/Lenguajes/nextjs.webp"
+              texto="Maquetacion de la web"
+            />
+            <HerramientasSection
+              img="/Lenguajes/tailwind.webp"
+              texto="Estilos css de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/ts.webp"
+              texto="Gestión de la lógica de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/nextAuth.webp"
+              texto="Autenticación de usuarios"
+            />
+            <HerramientasSection
+              img="/Lenguajes/aws.webp"
+              texto="Bucket para hostear los archivos de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/Stripe.webp"
+              texto="Para procesar los cobros y pagos"
+            />
+          </div>
+        </div>
+      </section>
+      <h2 class="self-center text-2xl mt-8">Stack de desarrollo</h2>
+      <section class="flex flex-col md:grid md:grid-cols-[1fr_1px_1fr] gap-8 gap-y-12">
+        <!-- Primera linea -->
+        <div class="flex gap-12 items-center">
+          <IdiomaIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Gestión de varios idiomas automatica"
+            subtitulo="i18n nativo"
+            texto_1="Sin librerías externas, gracias al middleware cogiendo la cabecera del request (URL), encapsulando todo el proyecto en la caperta [lang]>app.tsx, para que las rutas sean dinamicas."
+            texto_2="En función del idioma se consulta un diccionario que tiene un json de cada idioma con todo el texto de la pagina en cada uno."
+          />
+        </div>
+        <span
+          class="bg-gradient-to-b from-transparent via-gray-500 to-transparent hidden md:block"
+        ></span>
+        <div class="flex gap-12 items-center">
+          <BbddIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Base de datos de la aplicación"
+            subtitulo="MongoDB"
+            texto_1="Usando como ORM Mongoose, para gestionar las colecciones de la base de datos."
+            texto_2="Para hacer mutacioners en el servidor (update, insert, delete) se usa las ServerActions, mientras que para hacer selects y poder cachear la informacion se hace através de Fetchs."
+          />
+        </div>
+        <!-- Segunda linea -->
+        <div class="flex gap-12 items-center">
+          <FicherosIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Guardado de fotos y vídeos"
+            subtitulo="AWS S3 + CloudFront"
+            texto_1="Los usuarios pueden subir fotos y vídeos a la aplicación, si son fotos se suben desde el servidor, mientras que si son vídeos se suben directamente desde el cliente mediante una URL firmada."
+            texto_2="Las consultas de peticion de archivos al S3 pasarán a CloudFront, para que se cacheen y se sirvan más rápido."
+          />
+        </div>
+        <span
+          class="bg-gradient-to-b from-transparent via-gray-500 to-transparent hidden md:block"
+        ></span>
+        <div class="flex gap-12 items-center">
+          <AutenticacionIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Autenticación de usuarios y registro"
+            subtitulo="NextAuth"
+            texto_1="Permite a los usuarios registrarse y autenticarse en la aplicación, gestionando sesiones y permisos de acceso, ya sea por credenciales, mediante Google u otras, guardando el permiso en un JWT firmado."
+          />
+        </div>
+        <!-- Tercera linea -->
+        <div class="flex gap-12 items-center">
+          <PagoIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Gestión de pagos y suscripciones"
+            subtitulo="Stripe"
+            texto_1="Permite a los usuarios pagar por suscripciones, gestionando los cobros y pagos de forma segura."
+            texto_2="Las sesiones de checkout se crean a partir de los datos que ha proporcionado el entrenador para ajustar el precio de la suscripción según sus necesidades."
+          />
+        </div>
+        <span
+          class="bg-gradient-to-b from-transparent via-gray-500 to-transparent hidden md:block"
+        ></span>
+        <div class="flex gap-12 items-center">
+          <PagoAutomaticoIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Pagos automáticos a entrenadores"
+            subtitulo="Stripe + Stripe Connect"
+            texto_1="De manera automática, los entrenadores reciben su parte proporcional de cada suscripción, gestionando los pagos de forma segura."
+            texto_2="Stripe gestiona las transacciones y reparte los pagos, permitiendo que los entrenadores tengan acceso a sus ganancias de forma eficiente."
+          />
+        </div>
+        <!-- Cuarta linea -->
+        <div class="flex gap-12 items-center">
+          <EnviarIcon size={96} class="hidden sm:block"/>
+          <StackCard
+            titulo="Envio de mensajes"
+            subtitulo="Resend"
+            texto_1="Para enviar correos electrónicos a los usuarios y entrenadores."
+            texto_2="Esto pasa en diferentes ocasiones, como por ejemplo, cuando un usuario se registra o cuando un entrenador recibe una nueva suscripción, el precio de una suscripción cambia por lo tanto se notifica al usuario sobre ello, etc ..."
+          />
+        </div>
+      </section>
+    </div>
+  </section>
+</Layout>

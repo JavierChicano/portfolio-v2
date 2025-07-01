@@ -1,0 +1,80 @@
+---
+import * as shiki from 'shiki';
+import CopyIcon from '../svg/CopyIcon.astro';
+import CheckIcon from '../svg/CheckIcon.astro';
+
+const codeString = `formRegistro.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Obtener los valores de los campos del formulario
+  var nombre = document.getElementById("nombreRegistro").value;
+  var apellidos = document.getElementById("apellidosRegistro").value;
+  var email = document.getElementById("emailRegistro").value;
+  var password = document.getElementById("passwordRegistro").value;
+  //Se validan los formularios
+
+  //Se llama al método que los pasa através de ajax al php
+  insertarRegistro(nombre, apellidos, email, password);
+});`;
+
+const highlighter = await shiki.createHighlighter({ themes: ['one-dark-pro'], langs: ['js'] });
+const highlightedCode = highlighter.codeToHtml(codeString, { lang: 'js', theme: 'one-dark-pro' });
+---
+<div class="rounded-lg overflow-hidden bg-primary-blue">
+  <aside class="flex justify-between text-sm items-center px-4 py-2 font-semibold">
+    <p class="text-sm hidden sm:block">Código de ejemplo</p>
+    <button
+      id="copy-button-js"
+      class="py-1 flex items-center gap-2 cursor-pointer"
+      data-code={codeString}
+      type="button"
+      aria-label="Copiar código"
+    >
+      <CopyIcon class="icon" id="copy-icon-js" />
+      <CheckIcon class="icon hidden" id="check-icon-js" />
+      <span id="copy-text-js">Copiar código</span>
+    </button>
+  </aside>
+
+  <div
+    class="overflow-x-auto rounded-b-md p-4 bg-[#282C34] text-xs"
+    set:html={highlightedCode}
+  ></div>
+</div>
+
+<script is:inline>
+  (function() {
+    function initJsCopyButton() {
+      const button = document.getElementById("copy-button-js");
+      const textSpan = document.getElementById("copy-text-js");
+      const copyIcon = document.getElementById("copy-icon-js");
+      const checkIcon = document.getElementById("check-icon-js");
+      const code = button?.dataset.code || "";
+
+      if (!button) return;
+
+      button.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(code);
+          textSpan.innerText = "¡Copiado!";
+          copyIcon.classList.add("hidden");
+          checkIcon.classList.remove("hidden");
+
+          setTimeout(() => {
+            textSpan.innerText = "Copiar código";
+            copyIcon.classList.remove("hidden");
+            checkIcon.classList.add("hidden");
+          }, 3000);
+        } catch (err) {
+          textSpan.innerText = "Error al copiar";
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initJsCopyButton);
+    } else {
+      initJsCopyButton();
+    }
+  })();
+</script>

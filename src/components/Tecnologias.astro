@@ -1,0 +1,157 @@
+---
+import GithubIcon from "./svg/GithubIcon.astro";
+import TerminalIcon from "./svg/TerminalIcon.astro";
+---
+
+<section  class="relative flex flex-col text-center sm:mt-24 lg:mt-32 z-20 w-full gap-4 p-4">
+    <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl">Tecnologías</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-12 md:gap-y-24 max-w-7xl mx-auto relative">
+        <!-- Lineas gradientes -->
+        <div class="hidden md:block absolute inset-0 pointer-events-none">
+            <!-- Vertical -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-400 to-transparent transform -translate-x-1/2"></div>
+            <!-- Horizontal -->
+            <div class="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent transform -translate-y-1/2"></div>
+        </div>
+        
+        <!-- FRONTEND -->
+        <div class="flex flex-col gap-6 relative z-10">
+            <h2 class="font-semibold text-2xl">Frontend</h2>
+            <section class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/react.webp" alt="React logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>React</p>
+                </div>  
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/html.webp" alt="HTML logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>HTML</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/css.webp" alt="CSS logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>CSS</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/tailwind.webp" alt="TailwindCSS logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>TailwindCSS</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/js.webp" alt="JavaScript logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>JavaScript</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/ts.webp" alt="TypeScript logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>TypeScript</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/figma.webp" alt="Figma logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Figma</p>
+                </div> 
+            </section>
+            <div class="absolute -bottom-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent md:hidden"></div>
+        </div>
+        <!-- BACKEND -->
+        <div class="flex flex-col gap-6 relative z-10">
+            <h2 class="font-semibold text-2xl">Backend</h2>
+            <section class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/nextjs.webp" alt="Nextjs logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Nextjs</p>
+                </div>  
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/nodejs.webp" alt="Nodejs logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Nodejs</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/astro.webp" alt="Astro logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Astro</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/Mongodb.webp" alt="Mongodb logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Mongodb</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/mySql.webp" alt="MySql logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>MySql</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/turso.webp" alt="Turso logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Turso</p>
+                </div> 
+                 <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/php.webp" alt="PHP logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>PHP</p>
+                </div> 
+                 <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/java.webp" alt="Java logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Java</p>
+                </div> 
+            </section>
+            <div class="absolute -bottom-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent md:hidden"></div>
+        </div>
+        <!-- Herramientas -->
+        <div class="flex flex-col gap-6 relative z-10">
+            <h2 class="font-semibold text-2xl">Herramientas</h2>
+            <section class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center">
+                    <GithubIcon class="w-8 h-8 sm:w-14 sm:h-14"/>
+                    <p>GitHub</p>
+                </div>  
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/vsCode.webp" alt="VSCode logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>VSCode</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/bun.webp" alt="Bun logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Bun</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/Npm.webp" alt="npm logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>npm</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <TerminalIcon class="w-8 h-8 sm:w-14 sm:h-14"/>
+                    <p>Terminal</p>
+                </div> 
+            </section>
+            <div class="absolute -bottom-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent md:hidden"></div>
+        </div>
+         <!-- Librerías -->
+        <div class="flex flex-col gap-6 relative z-10">
+            <h2 class="font-semibold text-2xl">Librerías / Servicios</h2>
+            <section class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/aws.webp" alt="AWS logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>AWS</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/Cloudflare.webp" alt="Cloudflare logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Cloudflare</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/Stripe.webp" alt="Stripe logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Stripe</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/vercel.webp" alt="Vercel logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Vercel</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/nextAuth.webp" alt="NextAuth logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>NextAuth</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/resend.webp" alt="Resend logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Resend</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/zustand.webp" alt="Zustand logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Zustand</p>
+                </div> 
+                <div class="flex flex-col items-center">
+                    <img src="/Lenguajes/drizzle.webp" alt="Drizzle logo" class="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+                    <p>Drizzle</p>
+                </div> 
+            </section>
+        </div>
+    </div>
+</section>

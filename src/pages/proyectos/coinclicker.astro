@@ -1,0 +1,195 @@
+---
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import HerramientasSection from "@/components/HerramientasSection.astro";
+import ExternalLinkIcon from "@/components/svg/ExternalLinkIcon.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="flex flex-col w-full mt-12 items-center">
+    <div class="w-full max-w-7xl px-6 flex flex-col gap-4">
+      <Breadcrumb pagina="CoinClicker" />
+      <div class="w-full border-b border-gray flex justify-between flex-wrap">
+        <h1 class="text-3xl flex gap-2">
+          Proyecto<span class="text-primary-blue">CoinClicker</span>
+        </h1>
+        <a
+          href="https://github.com/JavierChicano/cookie-clicker-v3.git"
+          target="_blank"
+          class="flex gap-2 items-center text-xl text-gray-500 sm:text-white"
+          >Documentación<ExternalLinkIcon /></a
+        >
+      </div>
+      <article>
+        <p>
+          El juego se inspira en el Cookie Clicker, adaptándolo a una
+          experiencia dinámica centrada en la recolección de monedas.
+        </p>
+        <p>
+          Cada clic sobre la moneda incrementa tu saldo, y estas monedas pueden
+          invertirse en mejoras que amplían tu capacidad de producción, por otro
+          lado, las mejoras tienen un coste y un nivel que aumentan
+          progresivamente con cada adquisición. Por ejemplo, la mejora de Fuerza
+          duplica las ganancias por clic, mientras que otras otorgan ingresos
+          pasivos automáticos por segundo.
+        </p>
+        <p>
+          Próximamente, se planea introducir nuevas funcionalidades y mejoras
+          visuales para enriquecer la jugabilidad y el apartado estético del
+          juego.
+        </p>
+      </article>
+      <section
+        class="w-full border-y border-gray grid grid-cols-1 lg:grid-cols-2"
+      >
+        <a
+          class="flex flex-col gap-2 p-4 items-center group"
+          href="https://cookie-clicker-v3.vercel.app/"
+          target="_blank"
+        >
+          <h2 class="text-2xl flex gap-2 items-end">
+            Link al proyecto <ExternalLinkIcon size={24} />
+          </h2>
+          <div class="max-w-lg w-full">
+            <img
+              src="/Proyectos/CoinClicker2.webp"
+              alt="Foto del proyecto Sacoba"
+              class="w-full h-auto transition-all duration-300 group-hover:drop-shadow-primary-blue rounded-lg object-contain"
+            />
+          </div>
+        </a>
+        <div class="flex flex-col gap-2 p-4 items-center">
+          <h2 class="text-2xl">Herramientas</h2>
+          <div class="flex flex-col gap-4 h-full justify-center">
+            <HerramientasSection
+              img="/Lenguajes/nextjs.webp"
+              texto="Maquetacion de la web"
+            />
+            <HerramientasSection
+              img="/Lenguajes/tailwind.webp"
+              texto="Estilos css de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/ts.webp"
+              texto="Gestión de la lógica de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/zustand.webp"
+              texto="Gestión de estados globales"
+            />
+            <HerramientasSection
+              img="/Lenguajes/react.webp"
+              texto="Lenguaje base del proyecto"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="flex justify-around mb-4 sm:flex-row flex-col">
+        <h1 class="text-xl sm:w-1/2 flex justify-center">
+          Problemas afrontados
+        </h1>
+        <h1 class="text-xl w-1/2 sm:flex justify-center hidden">Soluciones</h1>
+      </section>
+
+      <!-- Primera explicación -->
+      <div
+        class="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-gray flex-wrap sm:flex-nowrap"
+      >
+        <aside class="sm:w-1/2">
+          Se han generado múltiples intervalos debido a la
+          <span class="font-semibold text-primary-blue">
+            generación repetitiva de componentes.
+          </span>
+          Esta situación emerge al generar componentes de forma infinita, lo que
+          resulta en la
+          <span class="font-semibold text-primary-blue">
+            creación ilimitada de intervalos.
+          </span>
+        </aside>
+        <p class="sm:w-1/2">
+          Se incluyó el
+          <span class="font-semibold text-primary-blue">
+            intervalo en el layout,
+          </span>
+          en lugar de en el componente. De esta manera, se generará únicamente una
+          vez, proporcionando una
+          <span class="font-semibold text-primary-blue">
+            gestión más eficiente
+          </span>
+          de los recursos.
+        </p>
+      </div>
+
+      <!-- Segunda explicación -->
+      <div
+        class="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-gray flex-wrap sm:flex-nowrap"
+      >
+        <aside class="sm:w-1/2">
+          Se plantea la cuestión de cómo
+          <span class="font-semibold text-primary-blue">
+            acceder a cada componente,
+          </span>
+          considerando que
+          <span class="font-semibold text-primary-blue">
+            todos son idénticos
+          </span>
+          y se generan de manera infinita.
+        </aside>
+        <p class="sm:w-1/2">
+          Se implementó la
+          <span class="font-semibold text-primary-blue">
+            creación de un mapa
+          </span>
+          que utiliza la clave de la fila para asociar un
+          <span class="font-semibold text-primary-blue"> objeto</span>
+          que contiene todos los
+          <span class="font-semibold text-primary-blue">datos</span> del componente
+          respectivo.
+        </p>
+      </div>
+
+      <!-- Tercera explicación -->
+      <div
+        class="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-gray flex-wrap sm:flex-nowrap"
+      >
+        <p class="sm:w-1/2">
+          Adaptar la
+          <span class="font-semibold text-primary-blue">
+            versión de escritorio a móvil.
+          </span>
+        </p>
+        <p class="sm:w-1/2">
+          Se consolidan
+          <span class="font-semibold text-primary-blue">
+            múltiples columnas en una sola,
+          </span>
+          y se implementa una funcionalidad de
+          <span class="font-semibold text-primary-blue">
+            navegación mediante flechas
+          </span>
+          para alternar entre ellas.
+        </p>
+      </div>
+
+      <!-- Cuarta explicación -->
+      <div
+        class="flex justify-around gap-8 sm:gap-20 p-4 mb-4 border-b border-gray flex-wrap sm:flex-nowrap"
+      >
+        <p class="sm:w-1/2">
+          Conforme avanzaba el juego, las
+          <span class="font-semibold text-primary-blue">
+            unidades de medida de las monedas
+          </span>
+          se volvían excesivamente grandes e inmanejables.
+        </p>
+        <p class="sm:w-1/2">
+          Se ha creado una
+          <span class="font-semibold text-primary-blue">
+            página dedicada a la gestión de unidades,
+          </span>
+          que incluye métodos para mostrar las monedas de dos formas diferentes abreviadas.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

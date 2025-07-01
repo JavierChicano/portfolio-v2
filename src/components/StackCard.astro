@@ -1,0 +1,29 @@
+---
+export interface Props {
+  titulo: string;
+  subtitulo: string;
+  texto_1: string;
+  texto_2?: string;
+}
+
+const {
+  titulo,
+  subtitulo,
+  texto_1,
+  texto_2,
+} = Astro.props;
+---
+
+
+<article class="h-full">
+  <h3>{titulo}</h3>
+  <span class="text-primary-blue text-sm">{subtitulo}</span>
+  <div class="text-gray-500 text-sm max-w-xl mt-2">
+    <p>
+      {texto_1}
+    </p>
+    <p>
+      {texto_2 ? texto_2 : ''}
+    </p>
+  </div>
+</article>

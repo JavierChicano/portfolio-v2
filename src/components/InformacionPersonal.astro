@@ -12,7 +12,7 @@ import MailIcon from "./svg/MailIcon.astro";
   class="relative flex flex-col items-center text-white z-20 w-full"
 >
   <section
-    class="border-x border-b border-gray max-w-7xl w-full mx-auto grid grid-cols-3 text-xl"
+    class="border-x border-b border-gray max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-3 text-xl"
   >
     <div class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
       <span class="flex gap-2 items-center"><MailIcon size={28}/>Escríbeme un correo</span>
@@ -36,7 +36,7 @@ import MailIcon from "./svg/MailIcon.astro";
        </a>
     </div>
   </section>
-  <div class="border-x border-b border-gray-600/15 max-w-7xl w-full mx-auto grid grid-cols-2">
+  <div class="border-x border-b border-gray-600/15 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2">
     <Experiencia />
     <Formacion />
   </div>

@@ -1,0 +1,17 @@
+---
+export interface Props {
+    img: string;
+  texto: string;
+}
+
+const { img, texto } = Astro.props;
+---
+
+<aside class="grid grid-cols-[12px_1fr] gap-12 sm:gap-20 items-center w-fit">
+  <div class="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
+    <img src={img} alt="Imagen de la tecnología">
+  </div>
+  <span class="sm:text-lg">
+    {texto}
+  </span>
+</aside>

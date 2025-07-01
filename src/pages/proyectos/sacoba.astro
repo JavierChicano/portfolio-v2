@@ -1,7 +1,184 @@
 ---
+import ExternalLinkIcon from "@/components/svg/ExternalLinkIcon.astro";
 import Layout from "@/layouts/Layout.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import HerramientasSection from "@/components/HerramientasSection.astro";
 ---
 
 <Layout>
-    dkflgknfg
+  <section class="flex flex-col w-full mt-12 items-center">
+    <div class="w-full max-w-7xl px-6 flex flex-col gap-4">
+      <Breadcrumb pagina="Sacoba" />
+      <div class="w-full border-b border-gray flex justify-between flex-wrap">
+        <h1 class="text-3xl flex gap-2">
+          Proyecto<span class="text-primary-blue">Sacoba</span>
+        </h1>
+        <a href="/Proyectos/CodigoSacoba.pdf" target="_blank" class="flex gap-2 items-center text-xl text-gray-500 sm:text-white"
+          >Documentación<ExternalLinkIcon /></a
+        >
+      </div>
+      <article>
+        <p>
+          El proyecto aborda el desarrollo de una plataforma web para Sacoba,
+          una tienda especializada en muebles de cocina.
+        </p>
+        <p>
+          Todos los datos, provienen de la digitalización de un catalógo y su
+          posterior insercion en una base de datos, para que la información
+          mostrada al usuario sea dinamica y pueda ser editada.
+        </p>
+        <p>
+          Los usuario tienen la posibilidad de disfrutar de todo el proceso de
+          compra sin necesidad de estar logueados, desde la personalización del
+          producto hasta la compra de él.
+        </p>
+      </article>
+      <section class="w-full border-y border-gray grid grid-cols-1 lg:grid-cols-2">
+        <a
+          class="flex flex-col gap-2 p-4 items-center group"
+          href="https://www.sacoba.es/"
+          target="_blank"
+        >
+          <h2 class="text-2xl flex gap-2 items-end">
+            Link al proyecto <ExternalLinkIcon size={24} />
+          </h2>
+          <div class="max-w-lg w-full">
+            <img
+              src="/Proyectos/Sacoba2.webp"
+              alt="Foto del proyecto Sacoba"
+              class="w-full h-auto transition-all duration-300 group-hover:drop-shadow-primary-blue rounded-lg object-contain"
+            />
+          </div>
+        </a>
+        <div class="flex flex-col gap-2 p-4 items-center">
+          <h2 class="text-2xl">Herramientas</h2>
+          <div class="flex flex-col gap-4 h-full justify-center">
+            <HerramientasSection
+              img="/Lenguajes/nextjs.webp"
+              texto="Maquetacion de la web"
+            />
+            <HerramientasSection
+              img="/Lenguajes/tailwind.webp"
+              texto="Estilos css de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/ts.webp"
+              texto="Gestión de la lógica de la página"
+            />
+            <HerramientasSection
+              img="/Lenguajes/drizzle.webp"
+              texto="Gestión consultas a la BBDD con sqlite"
+            />
+            <HerramientasSection
+              img="/Lenguajes/turso.webp"
+              texto="Host de la Base de datos"
+            />
+            <HerramientasSection
+              img="/Lenguajes/resend.webp"
+              texto="Envio automatico de correos"
+            />
+          </div>
+        </div>
+      </section>
+      <h2 class="self-center text-2xl mt-8">Stack de desarrollo</h2>
+      <p>
+        El desarrollo de la web se basa en <span
+          class="text-primary-blue font-semibold">React</span
+        >, utilizando el framework <span class="text-primary-blue font-semibold"
+          >Next.js</span
+        >. La lógica está implementada en <span
+          class="text-primary-blue font-semibold">TypeScript</span
+        >, y el estilo del frontend se gestiona con <span
+          class="text-primary-blue font-semibold">Tailwind CSS</span
+        >. La base de datos está alojada en <span
+          class="text-primary-blue font-semibold">Turso</span
+        > en formato <span class="text-primary-blue font-semibold">SQLite</span
+        >, y las operaciones sobre esta se manejan mediante <span
+          class="text-primary-blue font-semibold">Drizzle ORM</span
+        >.
+      </p>
+
+      <p>
+        Para la entrada de datos por parte del usuario a través de <span
+          class="text-primary-blue font-semibold">formularios</span
+        >, se utiliza la librería <span class="text-primary-blue font-semibold"
+          >Zod</span
+        > para la validación tanto en el cliente como en el servidor. Las contraseñas
+        se encriptan utilizando <span class="text-primary-blue font-semibold"
+          >bcrypt</span
+        >. En los procesos de registro o inicio de sesión, la información se
+        encapsula en un <span class="text-primary-blue font-semibold"
+          >token</span
+        > generado con <span class="text-primary-blue font-semibold"
+          >JsonWebToken</span
+        >, el cual se guarda en las <span
+          class="text-primary-blue font-semibold">cookies</span
+        > para mantener la sesión iniciada de forma persistente.
+      </p>
+
+      <p>
+        Los datos generados por la interacción del usuario con la interfaz se
+        almacenan inicialmente en <span class="text-primary-blue font-semibold"
+          >estados locales</span
+        > del componente. Una vez completada la configuración del producto o acción
+        deseada, esta información se transfiere a un <span
+          class="text-primary-blue font-semibold">estado global</span
+        > mediante la librería <span class="text-primary-blue font-semibold"
+          >Zustand</span
+        >. Si el usuario no está autenticado, los productos seleccionados se
+        guardan en la tabla <span class="text-primary-blue font-semibold"
+          >"carritoLocal"</span
+        > de la base de datos, sin vinculación directa con un cliente. Esta tabla
+        también almacena la fecha de cada registro, lo que permite ejecutar una tarea
+        <span class="text-primary-blue font-semibold">cron</span> para eliminar productos
+        almacenados durante más de una semana. Además, los identificadores se almacenan
+        en el <span class="text-primary-blue font-semibold">LocalStorage</span> del
+        navegador. En caso de que el usuario esté autenticado, los datos se migran
+        a la tabla correspondiente, garantizando su persistencia.
+      </p>
+
+      <p>
+        Todas las <span class="text-primary-blue font-semibold"
+          >funciones asíncronas</span
+        > están envueltas en bloques <span
+          class="text-primary-blue font-semibold">try/catch</span
+        > para evitar interrupciones críticas en la ejecución de la aplicación en
+        caso de errores inesperados.
+      </p>
+
+      <p>
+        Para la comunicación con el usuario, como confirmaciones de pedido,
+        restablecimiento de contraseña o notificaciones del sistema, se emplea
+        la API de <span class="text-primary-blue font-semibold">Resend</span> en
+        conjunto con <span class="text-primary-blue font-semibold"
+          >React Email</span
+        >, permitiendo el envío automático de correos electrónicos. Para
+        disponer de un dominio de envío propio (como <span
+          class="text-primary-blue font-semibold">@sacoba.es</span
+        >), se utiliza <span class="text-primary-blue font-semibold"
+          >Cloudflare</span
+        > para redirigir los correos enviados a direcciones personalizadas (por ejemplo:
+        <i>no-reply@sacoba.es</i>, <i>pedidos@sacoba.es</i>) hacia una cuenta de
+        Gmail desde la que se gestionan.
+      </p>
+
+      <p>
+        El uso de <span class="text-primary-blue font-semibold">Cloudflare</span
+        > también aporta seguridad y rendimiento adicional. Dado que la web maneja
+        un volumen elevado de <span class="text-primary-blue font-semibold"
+          >imágenes</span
+        > —lo que incrementa el consumo de ancho de banda en el servidor de alojamiento
+        (en este caso, <span class="text-primary-blue font-semibold"
+          >Vercel</span
+        >)—, Cloudflare permite alojar las imágenes en su propia
+        infraestructura. Esto convierte las solicitudes de imágenes en simples <span
+          class="text-primary-blue font-semibold">peticiones HTTP</span
+        >, haciendo que el peso de las imágenes no impacte negativamente en el
+        rendimiento o los límites de ancho de banda, además de proteger contra
+        posibles <span class="text-primary-blue font-semibold"
+          >ataques DDoS</span
+        >.
+      </p>
+    </div>
+  </section>
 </Layout>

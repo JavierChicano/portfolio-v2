@@ -4,16 +4,16 @@ import FileIcon from '@/components/svg/FileIcon.astro';
 import ArrowDownIcon from '@/components/svg/ArrowDownIcon.astro';
 ---
 <section class="w-full h-full flex flex-col gap-8 items-center justify-center text-center p-8 z-50 -mt-36 mb-4 text-white relative">
-    <h1 class="text-6xl font-bold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">Desarrollador Web Full Stack</h1>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">Desarrollador Web Full Stack</h1>
     <p class="bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent max-w-xl">Profesional apasionado por la informática, con formación técnica y en constante aprendizaje, enfocado en crecer y aportar en entornos dinámicos e innovadores.</p>
-    <div class="flex gap-4">
+    <div class="grid grid-cols-2 gap-4">
         <a class="btn-primary flex items-center gap-2 hover:ring-2 hover:ring-blue-500 hover:ring-offset-2 hover:ring-offset-black" href="/#proyectos">
-            <span class="btn-content">
-                <BriefcaseIcon/>
+            <span class="btn-content flex justify-center items-center gap-2">
+                <BriefcaseIcon class="hidden sm:block"/>
                 Mis proyectos
             </span>
             <ArrowDownIcon class="arrow-down" size={16}/>
         </a>
-        <a class="btn-secondary flex items-center gap-2" href="/JavierChicanoCV.pdf" target="_blank" rel="noopener noreferrer"><FileIcon/>Ver mi CV</a>
+        <a class="btn-secondary flex items-center gap-2 justify-center" href="/JavierChicanoCV.pdf" target="_blank" rel="noopener noreferrer"><FileIcon class="hidden sm:block"/>Ver mi CV</a>
     </div>
 </section>

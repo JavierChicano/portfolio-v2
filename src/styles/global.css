@@ -49,6 +49,19 @@
   .bg-gradient-primary-blue {
     background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
   }
+
+  .shadow-primary-blue\/50 {
+    --tw-shadow-color: rgb(0 144 255 / 0.5);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+
+  .group:hover .group-hover\:shadow-primary-blue {
+    filter: drop-shadow(0 10px 15px rgba(0, 144, 255, 0.5)) drop-shadow(0 4px 6px rgba(0, 144, 255, 0.1));
+  }
+
+  .group:hover .group-hover\:drop-shadow-primary-blue {
+    filter: drop-shadow(0 10px 15px rgba(0, 144, 255, 0.5)) drop-shadow(0 4px 6px rgba(0, 144, 255, 0.1));
+  }
 }
 
 @layer components {
@@ -66,6 +79,12 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+  }
+
+  @media (max-width: 640px) {
+    .btn-primary {
+      padding: 0.5rem 1rem;
+    }
   }
   
   .btn-primary:hover {
@@ -107,6 +126,12 @@
     align-items: center;
     color: white;
     transition: background-color 0.2s ease;
+  }
+
+  @media (max-width: 640px) {
+    .btn-secondary {
+      padding: 0.5rem 1rem;
+    }
   }
   
   .btn-secondary:hover {

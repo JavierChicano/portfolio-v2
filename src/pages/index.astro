@@ -3,13 +3,14 @@ import Layout from "@/layouts/Layout.astro";
 import MainTitle from "@/components/MainTitle.astro";
 import InformacionPersonal from "@/components/InformacionPersonal.astro";
 import Proyectos from "@/components/Proyectos.astro";
+import FondoMain from "@/components/FondoMain.astro";
+import Tecnologias from "@/components/Tecnologias.astro";
 ---
 
 <Layout>
+  <FondoMain />
   <MainTitle />
   <InformacionPersonal />
   <Proyectos />
-  <div class="mt-24 pb-24 relative z-20 flex justify-center w-full">
-    <div class="h-px w-full max-w-7xl bg-gradient-primary-blue"></div>
-  </div>
+  <Tecnologias />
 </Layout>
