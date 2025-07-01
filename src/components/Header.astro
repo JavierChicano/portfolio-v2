@@ -2,7 +2,7 @@
 import fotoPerfil from "../../public/foto.webp";
 ---
 
-<header class="relative text-white p-4 mt-8 z-10">
+<header class="relative text-white p-4 mt-8 z-[60]">
   <div class="max-w-7xl mx-auto grid grid-cols-3 w-full items-center">
 	  <div class="w-full flex flex-col justify-center">
 		<a class="text-2xl font-bold flex text-center" href="/">Javier Chicano</a>
@@ -15,7 +15,14 @@ import fotoPerfil from "../../public/foto.webp";
       />
     </a>
     <article class="w-full flex sm:justify-end items-center">
-      <a href="/JavierChicanoCV.pdf" download="JavierChicanoCV.pdf" class="hover:text-primary-blue transition-colors">Descargar CV</a>
+      <a 
+        href="/JavierChicanoCV.pdf" 
+        download="JavierChicanoCV.pdf"
+        target="_blank"
+        class="hover:text-primary-blue"
+      >
+        Descargar CV
+      </a>
     </article>
   </div>
 </header>

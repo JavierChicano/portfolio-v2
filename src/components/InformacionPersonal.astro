@@ -14,27 +14,27 @@ import MailIcon from "./svg/MailIcon.astro";
   <section
     class="border-x border-b border-gray max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-3 text-xl"
   >
-    <div class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
+    <a class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer" href="mailto:jchicano43@gmail.com" target="_blank">
       <span class="flex gap-2 items-center"><MailIcon size={28}/>Escríbeme un correo</span>
-       <a href="mailto:jchicano43@gmail.com" target="_blank" class="arrow-container relative">
+       <div  class="arrow-container relative">
          <ArrowRightIcon size={28} class="arrow-right" />
          <ArrowUpRightIcon size={28} class="arrow-up-right" />
-       </a>
-    </div>
-    <div class="contact-item flex items-center justify-between border-x border-gray px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
+       </div>
+    </a>
+    <a class="contact-item flex items-center justify-between border-x border-gray px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer" href="https://linkedin.com/in/javier-chicano" target="_blank">
       <span class="flex gap-2 items-center"><LinkedinIcon size={28}/>Contáctame en Linkedin</span>
-       <a href="linkedin.com/in/javier-chicano" target="_blank" class="arrow-container relative">
+       <div  class="arrow-container relative">
          <ArrowRightIcon size={28} class="arrow-right" />
          <ArrowUpRightIcon size={28} class="arrow-up-right" />
-       </a>
-    </div>
-    <div class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer">
+       </div>
+    </a>
+    <a class="contact-item flex items-center justify-between px-8 py-10 transition-colors duration-300 hover:bg-gray-700/15 cursor-pointer" href="https://github.com/JavierChicano" target="_blank">
       <span class="flex gap-2 items-center"><GithubIcon size={28}/>Mi Github</span>
-       <a href="https://github.com/JavierChicano" target="_blank" class="arrow-container relative">
+       <div class="arrow-container relative">
          <ArrowRightIcon size={28} class="arrow-right" />
          <ArrowUpRightIcon size={28} class="arrow-up-right" />
-       </a>
-    </div>
+       </div>
+    </a>
   </section>
   <div class="border-x border-b border-gray-600/15 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2">
     <Experiencia />
