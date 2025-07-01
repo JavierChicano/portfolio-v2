@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import DivisonAzul from "@/components/DivisonAzul.astro";
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import DivisonAzul from "@/components/DivisonAzul.astro";
     <Header />
     <slot />
     <DivisonAzul />
+   <Analytics /> <!-- Vercel Analytics is included to track page views and user interactions. -->
   </body>
 </html>
 
